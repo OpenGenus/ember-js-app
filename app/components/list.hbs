@@ -1,0 +1,16 @@
+<h2>{{@title}}</h2>
+
+<ul>
+  {{#each @feature as |feature|}}
+    <li>{{feature}}</li>
+  {{/each}}
+</ul>
+
+<ul>
+  {{#each this.data.features as |feature|}}
+    <li>
+      {{feature}}
+      <button type="button" {{on "click" (fn this.remove feature)}}>Remove</button>
+    </li>
+  {{/each}}
+</ul>
